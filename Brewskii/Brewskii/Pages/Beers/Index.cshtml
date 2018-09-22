@@ -1,0 +1,73 @@
+﻿@page
+@model Brewskii.Pages.Beers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<form>
+    <p>
+
+        <select asp-for="BeerType" asp-items="Model.BeerTypes">
+            <option value="">All</option>
+        </select>
+
+        BeerName: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Beer[0].BeerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beer[0].DateTried)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beer[0].BeerType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beer[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beer[0].Rating)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Beer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTried)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeerType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

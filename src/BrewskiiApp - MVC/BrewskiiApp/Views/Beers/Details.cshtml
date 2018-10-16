@@ -1,0 +1,42 @@
+﻿@model BrewskiiApp.Models.Beer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Beer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BeerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BeerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTried)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateTried)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BeerType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BeerType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

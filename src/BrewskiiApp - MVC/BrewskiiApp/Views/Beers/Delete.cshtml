@@ -1,0 +1,45 @@
+﻿@model BrewskiiApp.Models.Beer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Beer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BeerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BeerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTried)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateTried)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BeerType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BeerType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -4,6 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
+<!-- This is how we get background images on the page -->
+<body 
+    style="background-image: url('https://i.imgur.com/7CVFiog.jpg');">
+</body>
+
 <h2>Index</h2>
 
 <p>
@@ -40,26 +45,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.beers) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeerName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTried)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeerType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.beers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BeerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateTried)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BeerType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

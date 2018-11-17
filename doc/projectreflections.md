@@ -10,3 +10,4 @@
 
 <h2> Hung's Reflection: </h2>
 
+  At the beginning of the semester we all agreed that we were going to try to do a project that would give us real life skills in the industry that we would likely enter after graduation.  Learning new technologies like ASP.NET has been arduous since the learning curve has been really high.  I wish we had more time to work on the project but we have been able to focus on tasks and get objectives completed when necessary so I have no doubt we will finish strong.  I have done alot of documentation and will assist further in testing and coding objectives in the finishing stages of this project. Overall it's been a great learning experience and we would like to spend more time learning about concepts in the .NET frameworks.

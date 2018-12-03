@@ -1,23 +1,40 @@
-﻿@{
+@{
     ViewData["Title"] = "Contact";
 }
-
 <!-- This is how we get background images on the page -->
-<body 
-    style="background-image: url('https://i.imgur.com/7CVFiog.jpg');">
+<body style="background-image: url('https://i.imgur.com/7CVFiog.jpg');">
 </body>
+@{
+    ViewBag.Title = "Contact Us";
+}
 
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<address>
-    Indiana University Southeast<br />
-    4201 Grant Line Rd.<br />
-    New Albany, IN 47150<br />
-    <abbr title="Phone">P: </abbr>
-    (812) 941-2333
-</address>
+<h2>@ViewBag.Message</h2>
+<h4><u>Contact Information:</u></h4>
 
-<address>
-    <strong>Support: </strong> <a href="mailto:AMeiners@iu.edu">AMeiners@iu.edu</a><br />
-</address>
+<html>
+
+
+    <div>
+        <address>
+            Indiana University Southeast<br />
+            4201 Grant Line Rd.<br />
+            New Albany, IN 47150<br />
+            <abbr title="Phone">Phone:</abbr>
+            (812)-867-5309
+        </address>
+
+        <address>
+            
+            <strong>Member 1:</strong>  <a href="https://github.com/AndrewMeiners">Andrew Meiners</a><br />
+            <strong>Email: </strong> <a href="mailto:AMeiners@iu.edu">AMeiners@iu.edu</a><br />
+            <strong>Member 2: </strong> <a href="https://github.com/DanielRussell-druss">Daniel Russell</a><br />
+            <strong>Member 3:</strong>  <a href="https://github.com/HXNGUY01">Hung Nguyen<br />
+            <strong>Email: </strong> <a href="mailto:hungnguyenpsn@gmail.com">hungnguyenpsn@gmail.com</a><br />
+
+        </address>
+    </div>
+
+
+
+</html>

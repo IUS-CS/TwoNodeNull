@@ -27,6 +27,8 @@ function bind(){
             document.getElementById("sb").textContent = response.data[0].name;
             document.getElementById("beerImg").src = response.data[0].labels.medium;
             document.getElementById("id").textContent = response.data[0].id;
+            document.getElementById("abv").textContent = response.data[0].abv;
+            document.getElementById("bt").textContent = response.data[0].style.category.name;
             document.getElementById("try1").textContent = response.data[1].name;
             document.getElementById("try2").textContent = response.data[2].name;
             var beer = /beer/;

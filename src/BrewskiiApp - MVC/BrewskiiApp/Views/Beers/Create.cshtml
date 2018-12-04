@@ -44,35 +44,37 @@ beer2.js has our call info located in the wwwroot folder
 -->
 <div class="row">
     <div class="column">
-        <h4>Search for beer</h4>
+        <h4><b>Search for beer.</b></h4>
         <hr />
         <form method=" " post>
 
             <fieldset>
-                <label for="br">Beer: </label>
+                <label for="br"><b>Enter a beer:</b> </label>
                 <input type="text" name="br" id="br">
                 <input type="submit" name="submit_beer" id="beerSub">
+                <a asp-action="Create">Clear</a>
             </fieldset>
         </form>
         <ul>
-            <li><span>Beer Searched: </span><span id="sb"></span></li>
-            <li><img id="beerImg"><img></li>
-            <li><span>Beer ID: </span><span id="id"></span></li>
-            <li><span>Brewery: </span><span id="brew"></span></li>
-            <li><span>Location: </span><span id="loc"></span></li>
-            <li><img id="brewImg"><img></li>
-
+            <img id="beerImg"><img>
+            <li><span><b>Beer Searched:</b> </span><span id="sb"></span></li>
+            <li><span><b>Beer Type:</b> </span><span id="bt"></span></li>
+            <li><span><b>ABV:</b> </span><span id="abv"></span><span>%</span></li>
+            <li><span><b>Brewery:</b> </span><span id="brew"></span></li>
+            <li><span><b>Location:</b> </span><span id="loc"></span></li>
+            <li><span><b>BreweryDB ID:</b> </span><span id="id"></span></li>
+            <!-- <li><img id="brewImg"><img></li> BREWERY IMAGE-->
         </ul>
-        <p>Beer with similar names:</p>
+        <p><b>Beer with similar names:</b></p>
         <ul>
-            <li><span>Try: </span><span id="try1"></span></li>
-            <li><span>Try: </span><span id="try2"></span></li>
+            <li><span><b>Try:</b> </span><span id="try1"></span></li>
+            <li><span><b>Try:</b> </span><span id="try2"></span></li>
         </ul>
     </div>
 
 
     <div class="column">
-        <h4>Add a beer to your list (<a asp-action="Index">View Your List</a>)</h4>
+        <h4><b>Add a beer to your list.</b> (<a asp-action="Index">View Your List</a>)</h4>
         <hr />
         <div class="row">
             <div class="col-md-4">
@@ -103,7 +105,7 @@ beer2.js has our call info located in the wwwroot folder
                     </div>
                 </form>
             </div>
-            
+        </div>
     </div>
 </div>
 

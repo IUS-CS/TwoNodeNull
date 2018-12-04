@@ -20,7 +20,7 @@
 1. Download Visual Studio 2017 (Community Edition)
 2. Download or Clone this repository to your C: drive.
 3. Open Visual Studio and select 'File->Open' then when the windows explorer window appears navigate to  'C:\TwoNodeNull\src\BrewskiiApp - MVC' and double click 'BrewskiiApp.sln'
-4. Once the program loads locate the click the Debug icon at the top and select "Start Without Debugging" or hit ctrl+f5.
+4. Once the program loads locate and click the Debug icon at the top and select "Start Without Debugging" or hit ctrl+f5.
 5. Wait and the webpage will load in the browser (you may have to change Visual Studio settings to open the webpage in Google Chrome which is necessary for accessing the API).
 
 ## Authors

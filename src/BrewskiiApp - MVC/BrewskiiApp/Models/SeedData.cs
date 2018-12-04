@@ -20,24 +20,7 @@ namespace BrewskiiApp.Models
                 }
 
                 context.Beer.AddRange(
-                    new Beer
-                    {
-                        BeerName = "Bud Light",
-                        BeerType = "American Light Lager",
-                        Rating = 1.86M
-                    },
-                    new Beer
-                    {
-                        BeerName = "PBR",
-                        BeerType = "American Adjunct Lager",
-                        Rating = 2.93M
-                    },
-                    new Beer
-                    {
-                        BeerName = "Kentucky Brunch Brand Stout",
-                        BeerType = "American Imperial Stout",
-                        Rating = 4.84M
-                    }
+                 
             );
                 context.SaveChanges();
             }

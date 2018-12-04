@@ -62,7 +62,7 @@ namespace BrewskiiApp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Beers}/{action=Create}/{id?}");
             });
             
         }

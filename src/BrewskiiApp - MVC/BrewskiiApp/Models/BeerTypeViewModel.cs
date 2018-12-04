@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrewskiiApp.Models
 {
+
     public class BeerTypeViewModel
     {
         public List<Beer> beers;

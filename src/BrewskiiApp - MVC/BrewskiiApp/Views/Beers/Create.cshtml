@@ -4,42 +4,108 @@
     ViewData["Title"] = "Create";
 }
 
+<head>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="beer2.js"></script>
+</head>
+
+<!-- This is how we get background images on the page -->
+<body style="background-image: url('http://oi68.tinypic.com/21bji40.jpg');">
+</body>
+
+
+
+
 <h2>Create</h2>
 
-<h4>Beer</h4>
-<hr />
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<!--
+This is our Beer search form that connects to the API via ajax call.
+beer2.js has our call info located in the wwwroot folder
+-->
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="BeerName" class="control-label"></label>
-                <input asp-for="BeerName" class="form-control" />
-                <span asp-validation-for="BeerName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateTried" class="control-label"></label>
-                <input asp-for="DateTried" class="form-control" />
-                <span asp-validation-for="DateTried" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BeerType" class="control-label"></label>
-                <input asp-for="BeerType" class="form-control" />
-                <span asp-validation-for="BeerType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rating" class="control-label"></label>
-                <input asp-for="Rating" class="form-control" />
-                <span asp-validation-for="Rating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+    <div class="column">
+        <h4>Search for beer</h4>
+        <hr />
+        <form method=" " post>
+
+            <fieldset>
+                <label for="br">Beer: </label>
+                <input type="text" name="br" id="br">
+                <input type="submit" name="submit_beer" id="beerSub">
+            </fieldset>
         </form>
+        <ul>
+            <li><span>Beer Searched: </span><span id="sb"></span></li>
+            <li><img id="beerImg"><img></li>
+            <li><span>Beer ID: </span><span id="id"></span></li>
+            <li><span>Brewery: </span><span id="brew"></span></li>
+            <li><span>Location: </span><span id="loc"></span></li>
+            <li><img id="brewImg"><img></li>
+
+        </ul>
+        <p>Beer with similar names:</p>
+        <ul>
+            <li><span>Try: </span><span id="try1"></span></li>
+            <li><span>Try: </span><span id="try2"></span></li>
+        </ul>
+    </div>
+
+
+    <div class="column">
+        <h4>Add a beer to your list (<a asp-action="Index">View Your List</a>)</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="BeerName" class="control-label"></label>
+                        <input asp-for="BeerName" class="form-control" />
+                        <span asp-validation-for="BeerName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateTried" class="control-label"></label>
+                        <input asp-for="DateTried" class="form-control" />
+                        <span asp-validation-for="DateTried" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BeerType" class="control-label"></label>
+                        <input asp-for="BeerType" class="form-control" />
+                        <span asp-validation-for="BeerType" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Rating" class="control-label"></label>
+                        <input asp-for="Rating" class="form-control" />
+                        <span asp-validation-for="Rating" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </form>
+            </div>
+            
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 

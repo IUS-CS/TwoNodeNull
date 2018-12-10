@@ -4,12 +4,16 @@
 ## Dependencies
 * ##### Dotnet Core 2.1 SDK
 * ##### Google Chrome
-* ##### -Allow-Control-Allow-Origin: *
+* ##### -Allow-Control-Allow-Origin: https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
   * We are using AJAX (Asyncronous Javascript and XML) requests to access the BreweryDB API.  This Chrome extenion makes it so that your browser won't block the stuff that gets returned from cross domain ajax requests.  Enabling this extension necessary to run the beer search on the webpage.
+  
+### Testing:
+
+* We used Nunit and Moq for testing.  Download these packages in the Nuget package manager in visual studio under the Tools drop down menu.
 
 ## How to Run (Two Methods)
 #### First Method - Command Line
-1. Download Dotnet Core 2.1 SDK https://dotnet.microsoft.com/download.
+1. Download Dotnet Core 2.1 SDK: https://dotnet.microsoft.com/download.
 2. Download or Clone this repository to your C: drive.
 3. Open cmd line or powershell and navigate to the following path by copy/pasting or typing:
       'cd c:\C:TwoNodeNull\src\BrewskiiApp - MVC\BrewskiiApp'

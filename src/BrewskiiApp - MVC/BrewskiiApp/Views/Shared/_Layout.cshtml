@@ -86,9 +86,7 @@
 
  @RenderSection("Scripts", required: false)
     <div class="footer">
-        <h5>@Html.ActionLink("Home ", "Create", "Beers")</h5>
-        <h5>@Html.ActionLink("About ", "About", "Home")</h5>
-        <h5>@Html.ActionLink("Contact", "Contact", "Home")</h5>
+        <h5>@Html.ActionLink("Home ", "Create", "Beers")     @Html.ActionLink("About ", "About", "Home")     @Html.ActionLink("Contact", "Contact", "Home")</h5>
         <p>&copy; 2018 Brewskii. All Rights Reserved.</p>
     </div>
 </body>
